@@ -7,21 +7,22 @@ function setup() {
 function draw() 
 {
   background(30);
-  drawSprites();
+  
+  if (keyIsDown(UP_ARROW)) {
+    background("red");
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+      background("yellow");
+    }
+    if (keyIsDown(LEFT_ARROW)) {
+      background("green");
+    }
+    if (keyIsDown(DOWN_ARROW)) {
+      background("blue");
+    }
+    drawSprites();
+  }
 
-  if(keyIsDown(RIGHT_ARROW)){
-    box.position.x = box.position.x + 2;
-  }
-  if(keyIsDown(LEFT_ARROW)){
-    box.position.x = box.position.x - 2;
-  }
-  if(keyIsDown(DOWN_ARROW)){
-    box.position.y = box.position.y + 2;
-  }
-  if(keyIsDown(UP_ARROW)){
-    box.position.y = box.position.y - 2;
-  }
-}
 
 
 
